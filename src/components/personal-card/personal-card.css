@@ -1,0 +1,41 @@
+.b-personal-card-box{
+    transition: all .3s ease-in-out;
+    box-shadow: 0 0 2rem rgba(0,0,255,.1);
+    border-radius: 1rem;
+    
+
+}
+
+.b-personal-card {
+    background-color: #fff;
+    box-shadow: 0 2px 3px rgba(10,10,10,.1);
+    color: #4a4a4a;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+    border-radius: 1rem;
+}
+
+.b-personal-card-content {
+    padding: 1.5rem;
+}
+
+.b-personal-card-fullname {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1rem;
+}
+
+.b-personal-card-photo{
+    border-radius: 50%;
+    border: 6px solid #e6e6ef;
+    padding: 1.5rem;
+}
+
+.b-personal-card-rol{
+    color: red;
+}
+
+.b-personal-card-resume {
+    color: #aaaaaa;
+}

@@ -20,6 +20,17 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface PersonalCard {
+        "firstName": string;
+        "lastName": string;
+        "photo": string;
+        "resume": string;
+        "rol": string;
+    }
+    interface VideoPlayer {
+        "provider": string;
+        "source": string;
+    }
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -28,8 +39,22 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLPersonalCardElement extends Components.PersonalCard, HTMLStencilElement {
+    }
+    var HTMLPersonalCardElement: {
+        prototype: HTMLPersonalCardElement;
+        new (): HTMLPersonalCardElement;
+    };
+    interface HTMLVideoPlayerElement extends Components.VideoPlayer, HTMLStencilElement {
+    }
+    var HTMLVideoPlayerElement: {
+        prototype: HTMLVideoPlayerElement;
+        new (): HTMLVideoPlayerElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
+        "personal-card": HTMLPersonalCardElement;
+        "video-player": HTMLVideoPlayerElement;
     }
 }
 declare namespace LocalJSX {
@@ -47,8 +72,21 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface PersonalCard {
+        "firstName"?: string;
+        "lastName"?: string;
+        "photo"?: string;
+        "resume"?: string;
+        "rol"?: string;
+    }
+    interface VideoPlayer {
+        "provider"?: string;
+        "source"?: string;
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
+        "personal-card": PersonalCard;
+        "video-player": VideoPlayer;
     }
 }
 export { LocalJSX as JSX };
@@ -56,6 +94,8 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "personal-card": LocalJSX.PersonalCard & JSXBase.HTMLAttributes<HTMLPersonalCardElement>;
+            "video-player": LocalJSX.VideoPlayer & JSXBase.HTMLAttributes<HTMLVideoPlayerElement>;
         }
     }
 }
